@@ -1,0 +1,99 @@
+/* global CSS variables */
+:root {
+  --Blue-Primary-Color: #06C;
+  --Yellow-Secondary-Color: #FFE601;
+  --Black-Content-Color: #232323;
+  --Background-Color: #FAFAFA;
+  --White-Background-Color: #FFF;
+}
+
+/* import downloaded e-Ukraine-Head font from assets */
+@font-face {
+  font-family: 'e-Ukraine-Head-Bold';
+  src: url('/assets/fonts/e-UkraineHead-Bold.otf') format('opentype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Typography related style classes */
+.h1 {
+  color: var(--Black-Content-Color);
+
+  /* Heading H1 Title */
+  font-family: 'e-Ukraine-Head-Bold', Arial, Helvetica, sans-serif;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 64.5px */
+}
+
+.h2-bold {
+  color: var(--Black-Content-Color);
+  font-variant-numeric: lining-nums proportional-nums;
+
+  /* H2 Bold */
+  font-family: 'Raleway', sans-serif;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 64.5px */
+}
+
+.h2 {
+  color: var(--Black-Content-Color);
+
+  /* Heading H2 Title (Regular) */
+  font-family: 'Jost', sans-serif;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 129.7%; /* 55.771px */
+  text-transform: capitalize;
+}
+
+.h3 {
+  color: var(--Black-Content-Color);
+
+  /* Heading H3 Title */
+  font-family: 'e-Ukraine-Head-Bold', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 36px */
+}
+
+.h4 {
+  color: var(--Black-Content-Color);
+  font-variant-numeric: lining-nums proportional-nums;
+
+  /* Heading H4 Title */
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 33px */
+}
+
+.p {
+  color: var(--Black-Content-Color);
+
+  /* Paragraph */
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 27px */
+}
+
+.list {
+  color: #4E4E4E;
+
+  /* List */
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+  text-transform: capitalize;
+}

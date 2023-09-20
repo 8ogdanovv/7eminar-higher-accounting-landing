@@ -15,5 +15,8 @@
     "@nuxt/devtools": "latest",
     "gh-pages": "^6.0.0",
     "nuxt": "^3.7.3"
+  },
+  "dependencies": {
+    "nuxt-swiper": "^1.2.2"
   }
 }
