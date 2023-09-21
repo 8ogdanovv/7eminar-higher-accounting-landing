@@ -17,6 +17,7 @@
     "nuxt": "^3.7.3"
   },
   "dependencies": {
-    "nuxt-swiper": "^1.2.2"
+    "swiper": "^8.4.7",
+    "uuid": "^9.0.1"
   }
 }

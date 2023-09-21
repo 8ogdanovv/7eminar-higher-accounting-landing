@@ -7,6 +7,21 @@
   --White-Background-Color: #FFF;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2.5rem 0 3.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
 /* import downloaded e-Ukraine-Head font from assets */
 @font-face {
   font-family: 'e-Ukraine-Head-Bold';
@@ -22,10 +37,13 @@
 
   /* Heading H1 Title */
   font-family: 'e-Ukraine-Head-Bold', Arial, Helvetica, sans-serif;
-  font-size: 43px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 64.5px */
+
+  margin: 21px 16px;
+  padding: 0 8px;
 }
 
 .h2-bold {
@@ -96,4 +114,18 @@
   font-weight: 400;
   line-height: 130%; /* 23.4px */
   text-transform: capitalize;
+}
+
+@media (min-width: 1078px) {
+  body {
+    padding: 4rem 0 11rem;
+  }
+
+  .p {
+    font-size: 17px;
+  }
+
+  .h1 {
+    font-size: 48px;
+  }
 }

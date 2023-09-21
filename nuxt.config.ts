@@ -29,7 +29,6 @@ export default defineNuxtConfig({
 
   },
 
-  modules: ['nuxt-swiper'],
   // swiper: {
   //   // Swiper options
   //   //----------------------

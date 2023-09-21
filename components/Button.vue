@@ -6,14 +6,23 @@
         'link-button': isLink,
         'action-button': isAction,
         'video-button': isVideo,
-        'special-style': specialStyle,
-        'regular-style': regularStyle,
       },
     ]"
     @click="handleClick"
     v-if="isVisible"
   >
-    {{ text }}
+
+      <a
+        v-if="isLink"
+        :href="link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ text }}
+      </a>
+      <span v-else>
+        {{ text }}
+      </span>
   </button>
 </template>
 
@@ -21,12 +30,11 @@
 export default {
   props: {
     text: String,
-    link: String, // Href navigation link
-    action: Function, // Action function
-    video: String, // Video link
-    specialStyle: Boolean, // Whether to apply special styles
-    regularStyle: Boolean, // Whether to apply regular styles
+    link: String,
+    action: Function,
+    video: String,
   },
+
   computed: {
     isLink() {
       return !!this.link;
@@ -41,6 +49,7 @@ export default {
       return this.isLink || this.isAction || this.isVideo;
     },
   },
+
   methods: {
     handleClick() {
       if (this.isLink) {
@@ -59,27 +68,44 @@ export default {
 </script>
 
 <style scoped>
+
 .my-button {
-  // Common button styles
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 980px;
+  background: var(--Blue-Primary-Color);
 }
 
 .link-button {
-  // Styles for navigation link button
+  padding: 18px 32px;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.374px;
 }
 
 .action-button {
-  // Styles for action button
+  width: 255px;
+  padding: 16px 40px;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Railway';
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 32px;
 }
 
 .video-button {
-  // Styles for video link button
+  padding: 4px 24px 4px 4px;
+  gap: 8px;
+  border-radius: 45px;
 }
 
-.special-style {
-  // Special styles to be applied conditionally
-}
-
-.regular-style {
-  // Regular styles to be applied conditionally
-}
 </style>
